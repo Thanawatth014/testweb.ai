@@ -24,15 +24,19 @@
             <a href="#">About</a>
             <a href="#">Step prices</a>
             <a href="adminMain.html" id="adminLink">Admin management</a>
+            <script src="auth.js"></script>
+
             <script>
-                // ดักคลิกที่ลิงก์: ถ้าไม่ล็อกอิน → ไป login.html
-                document.getElementById("adminLink").addEventListener("click", (e) => {
-                    if (!isLoggedIn()) {
-                        e.preventDefault(); // ห้ามไปหน้า admin ตรง ๆ
-                        const url = new URL("login.html", location.href);
-                        url.searchParams.set("redirect", "adminMain.html");
-                        location.href = url.toString(); // ส่งไป login.html
-                    }
+                document.addEventListener("DOMContentLoaded", () => {
+                    const adminLink = document.getElementById("adminLink");
+                    adminLink.addEventListener("click", (e) => {
+                        if (!isLoggedIn()) {
+                            e.preventDefault();
+                            const url = new URL("login.html", location.href);
+                            url.searchParams.set("redirect", "adminMain.html");
+                            location.href = url.toString();
+                        }
+                    });
                 });
             </script>
             <a href="#">Contact</a>
