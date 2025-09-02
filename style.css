@@ -55,3 +55,30 @@ nav-link{
     margin: 0 15px;
     font-size: 18px;
 }
+.container_summery{
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffffa6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,).1;
+}
+.container_sflist{
+    display: flex;
+}
+.container_sfly1{
+    align-items: center;
+    width: 20%;
+    padding: 20px;
+    background-color: #ffffff86;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.container_sfly2{
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff86;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+    

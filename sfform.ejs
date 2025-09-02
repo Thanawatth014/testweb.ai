@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: url('static/BG.png');">
+    <header>
+        <div class="logo">
+            <img src="static/logo.png" alt="Logo">
+        </div>
+        <div class="A">
+            <div>
+                <h2>Administration -- Data Software List in NTTT.tech</h2>
+            </div>
+            <hr>
+            <div style="font-size: larger; font-style: italic; color: yellow;">
+                <a href="adminMain.html" style="margin-right: 10px;">Back To Home</a>
+            </div>
+
+        </div>
+    </header>
+    <div class="container_sflist">
+        <div class="container_sfly1">
+            <form action="">
+                <label for="softwareName">Software Name:</label><br>
+                <input type="text" id="softwareName" name="softwareName"><br><br>
+                <label for="version">Version or Year:</label><br>
+                <input type="text" id="version" name="version"><br><br>
+                <label for="price">Price (Baht):</label><br>
+                <input type="text" id="price" name="price"><br><br>
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="20" cols="25"></textarea><br><br>
+                <input type="submit" value="Add Software">
+            </form>
+        </div>
+        <div class="container_sfly2">
+            <table>
+                <h4>Table Of software lists</h4>
+            </table>
+        </div>
+    </div>
+<footer>
+    <p>&copy; 2024 Applications Seller. All rights reserved. te</p>
+</footer>
+</body>
+
+</html>
