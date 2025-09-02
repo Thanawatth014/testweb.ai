@@ -12,23 +12,35 @@
 
 <body>
     <div>
-        <div class="header">
+        <header>
             <div class="logo">
                 <img src="logo.png" alt="Logo">
-                <div>
-                    <h2 style="font-size: 40px;">Welcom to โปรแกรมรายรับ-รายจ่าย </h2>
-                </div>
             </div>
-            <div>
-                <a href="#">Home</a>
-                <a href="#">Products</a>
-                <a href="#">About</a>
-                <a href="#">Step prices</a>
-                <a href="#">Contact</a>
-            </div>
+            <h1>Applications Seller</h1>
+        </header>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Step prices</a>
+
+            <a href="/adminMain.html" id="adminLink">Admin management</a>
+            <script>
+                // ดักคลิกที่ลิงก์: ถ้าไม่ล็อกอิน → ไป login.html
+                document.getElementById("adminLink").addEventListener("click", (e) => {
+                    if (!isLoggedIn()) {
+                        e.preventDefault(); // ห้ามไปหน้า admin ตรง ๆ
+                        const url = new URL("login.html", location.href);
+                        url.searchParams.set("redirect", "adminMain.html");
+                        location.href = url.toString(); // ส่งไป login.html
+                    }
+                });
+            </script>
+
+            <a href="#">Contact</a>
         </div>
-        <h1>Applications seller</h1>
-        <p>Welcome to the applications seller. Here you can find a variety of applications to suit your needs.</p>
+    </div>
+    <p>Welcome to the applications seller. Here you can find a variety of applications to suit your needs.</p>
     </div>
     <div class="container1">
         <div class="item">
