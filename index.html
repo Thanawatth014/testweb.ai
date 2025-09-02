@@ -24,21 +24,6 @@
             <a href="#">About</a>
             <a href="#">Step prices</a>
             <a href="adminMain.html" id="adminLink">Admin management</a>
-            <script src="auth.js"></script>
-
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const adminLink = document.getElementById("adminLink");
-                    adminLink.addEventListener("click", (e) => {
-                        if (!isLoggedIn()) {
-                            e.preventDefault();
-                            const url = new URL("login.html", location.href);
-                            url.searchParams.set("redirect", "adminMain.html");
-                            location.href = url.toString();
-                        }
-                    });
-                });
-            </script>
             <a href="#">Contact</a>
         </div>
     </div>
@@ -66,6 +51,22 @@
         <p>&copy; 2024 Applications Seller. All rights reserved. te</p>
     </footer>
 
+
+    <script src="auth.js"></script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const adminLink = document.getElementById("adminLink");
+                    adminLink.addEventListener("click", (e) => {
+                        if (!isLoggedIn()) {
+                            e.preventDefault();
+                            const url = new URL("login.html", location.href);
+                            url.searchParams.set("redirect", "adminMain.html");
+                            location.href = url.toString();
+                        }
+                    });
+                });
+            </script>
 </body>
 
 </html>
