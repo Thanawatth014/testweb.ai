@@ -10,38 +10,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-image: url('/static/BG.png');">
+<body style="background-image: url('static/BG.png');">
     <div>
         <header>
             <div class="logo">
-                <img src="/static/logo.png" alt="Logo">
+                <img src="static/logo.png" alt="Logo">
             </div>
-            <h1>Applications Seller</h1>
+            <div class="A">
+                <div>
+                    <h2>NTTT.Tech -- Applications Seller</h2>
+                </div>
+                <hr>
+                <div style="font-size: larger; font-style: italic; color: yellow;">
+                    <a href="#">Home</a>
+                    <a href="#">Products</a>
+                    <a href="#">About</a>
+                    <a href="#">Step prices</a>
+                    <a href="adminMain.html" id="adminLink">Admin management</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
         </header>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Step prices</a>
-            <a href="adminMain.html" id="adminLink">Admin management</a>
-            <a href="#">Contact</a>
-        </div>
+
     </div>
     <p>Welcome to the applications seller. Here you can find a variety of applications to suit your needs.</p>
     </div>
     <div class="container1">
         <div class="item">
-            <h2>Free Version</h2>
+            <h2>Software 1</h2>
             <p>This is a great application that helps you manage your tasks efficiently.</p>
             <button>Buy Now</button>
         </div>
         <div class="item">
-            <h2>Small Business</h2>
+            <h2>Software 2</h2>
             <p>This application provides excellent tools for project collaboration.</p>
             <button>Buy Now</button>
         </div>
         <div class="item">
-            <h2>inventory version</h2>
+            <h2>software 3</h2>
             <p>An innovative app that enhances your productivity and workflow.</p>
 
             <button>Buy Now</button>
@@ -52,19 +58,19 @@
     </footer>
     <script src="auth.js"></script>
 
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const adminLink = document.getElementById("adminLink");
-                    adminLink.addEventListener("click", (e) => {
-                        if (!isLoggedIn()) {
-                            e.preventDefault();
-                            const url = new URL("login.html", location.href);
-                            url.searchParams.set("redirect", "adminMain.html");
-                            location.href = url.toString();
-                        }
-                    });
-                });
-            </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const adminLink = document.getElementById("adminLink");
+            adminLink.addEventListener("click", (e) => {
+                if (!isLoggedIn()) {
+                    e.preventDefault();
+                    const url = new URL("login.html", location.href);
+                    url.searchParams.set("redirect", "adminMain.html");
+                    location.href = url.toString();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
